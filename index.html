@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scramble Game</title>
+</head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src="scramble.js"></script>
+
+<body onload="initGame();">
+  <div id="app">
+    <div class="hello">
+      <h1>Welcome to Scramble</h1>
+      <div class="row">
+        <h1 id="game_points"></h1>
+        <h1 id="game_strikes"></h1>
+      </div>
+      <div class="row">
+        <h6>POINTS</h6>
+        <h6>STRIKES</h6>
+      </div>
+      <div
+        class="msg-box"
+      >
+        <!-- {{ status.message }} -->
+      </div>
+      <h2 id="suffleWord"></h2>
+      <input
+        type="text"
+        id="text_box"
+        onkeypress="checkWord(event)"
+      />
+      <div>
+        <button onClick="passWord()" id="pass_btn">
+          <span
+            >
+            <b id="passLimit"></b>
+            </span>
+          Passes Remaining
+        </button>
+        <br />
+        <button id="replay_btn" onClick="playAgain()">
+          Play, Again?
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
